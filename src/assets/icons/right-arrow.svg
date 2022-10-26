@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="right-arrow" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.53 17.65">
+  <defs>
+    <style>
+      .cls-right {
+        fill: none;
+        stroke: #8e8e8e;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <polyline class="cls-right" points=".35 .35 8.82 8.82 .35 17.29"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="up-arrow" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.03 21.14">
+  <defs>
+    <style>
+      .cls-up-arrow {
+        fill: none;
+        stroke: #f3ae2a;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <polyline class="cls-up-arrow" points="1.5 19.64 19.01 2.12 36.53 19.64"/>
+  </g>
+</svg>

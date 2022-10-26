@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PRView from './views/PRView';
+import "./app.css";
+import prData from "./data/Summer2022.json";
+import { Player } from './types/player';
 
 function App() {
+
+  const players = prData as Player[];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PRView prData={players} />
     </div>
   );
 }

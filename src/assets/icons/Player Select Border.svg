@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="player-select" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 320">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f3ae2a;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M195.74,4l-19.5,312H4.26L23.76,4H195.74m4.26-4H20L0,320H180L200,0h0Z"/>
+  </g>
+</svg>

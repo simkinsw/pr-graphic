@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="mouse-icon" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.89 61.3">
+  <defs>
+    <style>
+      .cls-mouse {
+        fill: none;
+        stroke: #f3ae2a;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <rect class="cls-mouse" x="1.5" y="1.5" width="37.89" height="58.3" rx="15.52" ry="15.52"/>
+    <line class="cls-mouse" x1="20.45" y1="14.4" x2="20.45" y2="23.49"/>
+  </g>
+</svg>

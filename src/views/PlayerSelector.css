@@ -1,0 +1,82 @@
+.selector-container {
+    flex: 1;
+    padding-top: 1.5em;
+    padding-left: 5em;
+    padding-right: 7em;
+}
+
+.article-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2.8em;
+}
+
+a {
+    color: #eae9e4;
+    text-decoration: none;
+}
+
+.article-link-text {
+    font-size: 1.5em;
+    color: #8e8e8e;
+}
+
+.right-arrow {
+    margin-left: .6em;
+    margin-top: .2em;
+    width: .6em;
+}
+
+.player-select-box-container {
+    transform: skew(-4deg);
+    margin-top: 3em;
+    padding-bottom: 4em;
+    flex: 1;
+}
+
+.player-select-row-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-right: 10%;
+}
+
+.player-select-icon-container {
+    flex: 1;
+    margin: .25em;
+    aspect-ratio: 9 / 16;
+    border: 2px solid #f3ac32;
+    background-size: 130%;
+    background-image: url("../assets/images/fox-statue.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    align-items: flex-end;
+}
+
+.player-select-icon-text {
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+    width: 100%;
+    align-items: flex-end;
+    vertical-align: text-bottom;
+}
+
+.player-select-icon-rank {
+    width: 20%;
+    background-color: #f3ac32;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: .1em;
+    text-align: center;
+}
+
+.player-select-icon-name {
+    width: 80%;
+    padding-left: .4em;
+    padding-bottom: .2em;
+    font-size: 1.3em;
+    background: linear-gradient(#eae9e4, #10100e);
+    background: linear-gradient(rgba(234, 233, 228, 0), rgba(16, 16, 14, 1.0))
+}

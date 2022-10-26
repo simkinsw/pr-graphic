@@ -1,0 +1,99 @@
+.focused-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    padding-left: 6em;
+    padding-right: 10em;
+    padding-bottom: 2em;
+    height: 85%;
+    overflow-y: hidden;
+}
+
+.summary-data-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 3em;
+    padding-right: 3em;
+}
+
+.summary-data-header {
+    font-size: 1em;
+    color: #8e8e8e;
+}
+
+.summary-data-value {
+    font-size: 4em;
+    font-weight: bold;
+    line-height: .8;
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 2em;
+    height: 100%;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: .3em;               
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #3b3b3b;       
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    border-radius: 20px;       
+    border: 3px solid #eae9e4;  
+}
+
+.recent-results-container {
+    margin-bottom: 1em;
+}
+
+.recent-result {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    margin-bottom: .3em;
+}
+
+.recent-result-placing {
+    font-variant-numeric: ordinal;
+    font-weight: bold;
+}
+
+.recent-result-placing-suffix {
+    display: inline;
+    font-size: .5em;
+    vertical-align: super;
+}
+
+.recent-result-event {
+    padding-left: .3em;
+    color: #8e8e8e;
+}
+
+.blurb-paragraph {
+    color: #8e8e8e;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    line-height: 1.4;
+}
+
+.read-more-tooltip-container {
+    color: #8e8e8e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.read-more-icon {
+    margin-top: .5em;
+    width: 2em;
+}

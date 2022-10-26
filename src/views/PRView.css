@@ -1,0 +1,117 @@
+.pr-view-container {
+    flex: 1;
+    background-color: #10100e;
+    color: #eae9e4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.pr-view-left {
+    flex: 1.2;
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.pr-view-right {
+    flex: 1;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.clm-logo {
+    width: 3em;
+}
+
+.sidebar-text {
+    writing-mode: vertical-rl;
+    font-size: 1.5em;
+    padding: .4em;
+    padding-top: 1.5em;
+    color: #8e8e8e;
+}
+
+.scroll-ui-bottom {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 1.5em;
+}
+
+.scroll-ui-top {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 1.5em;
+}
+
+.mouse-icon {
+    margin-bottom: .5em;
+    margin-top: .5em;
+    width: 1.8em;
+}
+
+.player-preview-container {
+    margin-top: 5em;
+    margin-bottom: 2.5em;
+    padding-right: 10em;
+    flex: 1;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.player-preview-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.player-preview-real-name {
+    font-size: 1.8em;
+}
+
+.player-preview-tag {
+    color: #f3ac32;
+    font-weight: bold;
+    font-size: 7em;
+    line-height: 0.8;
+}
+
+.player-preview-twitter {
+    padding-top: 1em;
+}
+
+.twitter-icon {
+    width: 1.8em;
+}
+
+.player-preview-twitter-handle {
+    font-size: 1.8em;
+    padding-left: .2em;
+    color: #8e8e8e;
+}
+
+.number-sign {
+    color: #8e8e8e;
+    font-size: .6em;
+    font-style: normal;
+}
+
+.player-preview-rank {
+    line-height: 1.0;
+    font-size: 15em;
+    font-weight: bold;
+    font-style: italic;
+}
