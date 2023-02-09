@@ -1,0 +1,58 @@
+.mouse-icon {
+    border: 3px solid #f2552c;
+    border-radius: 14px;
+    display: block;
+    height: 50px;
+    width: 31px;
+  }
+  .mouse-icon .wheel {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: drop;
+    animation-name: drop;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    background: #f2552c;
+    border-radius: 10px;
+    height: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 4px;
+    width: 3px;
+  }
+  @-webkit-keyframes drop {
+    0% {
+      opacity: 0;
+      top: 2px;
+    }
+    30% {
+      opacity: 1;
+      top: 7px;
+    }
+    to {
+      opacity: 0;
+      top: 20px;
+    }
+  }
+  @keyframes drop {
+    0% {
+      opacity: 0;
+      top: 2px;
+    }
+    30% {
+      opacity: 1;
+      top: 7px;
+    }
+    to {
+      opacity: 0;
+      top: 20px;
+    }
+  }
+  

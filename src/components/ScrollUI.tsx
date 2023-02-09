@@ -1,25 +1,24 @@
-import { ReactComponent as MouseIcon } from "../assets/icons/mouse-icon.svg";
-import { ReactComponent as DownArrowIcon } from "../assets/icons/down-arrow.svg";
-import { ReactComponent as UpArrowIcon } from "../assets/icons/up-arrow.svg";
+import "../views/mouseAnimation.css";
+import { useRef } from "react";
 
 interface ScrollUIProps {
-    top: boolean;
     switchViews: () => void;
 }
 
-function ScrollUI( { top, switchViews }: ScrollUIProps) {
+function ScrollUI( { switchViews }: ScrollUIProps) {
+
+    const nodeRef = useRef(null);
+
     return (
-        top ? (
-            <div className={"scroll-ui-top"} onClick={switchViews}>
-                <UpArrowIcon className="up-arrow-icon"  />
-                <MouseIcon className="mouse-icon" />
-            </div>
-        ) : (
-            <div className={"scroll-ui-bottom"} onClick={switchViews}>
-                <MouseIcon className="mouse-icon" />
-                <DownArrowIcon className="down-arrow-icon"  />
-            </div>
-        )
+        /*
+        <div className={"scroll-ui"} onClick={switchViews}>
+            <MouseIcon className="mouse-icon" />
+            <DownArrowIcon className="down-arrow-icon"  />
+        </div>
+        */
+        <div className="scroll-ui" ref={nodeRef}>
+            <div className="mouse-icon"><div className="wheel"></div></div>
+        </div>
     );
 }
 

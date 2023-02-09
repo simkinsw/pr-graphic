@@ -8,6 +8,7 @@ export type Player = {
     winLoss: string;
     prEvents: number;
     placements: Placement[];
+    blurbAuthor: string;
     blurb: string[];
 }
 

@@ -1,82 +1,166 @@
-.selector-container {
-    flex: 1;
-    padding-top: 1.5em;
-    padding-left: 5em;
-    padding-right: 7em;
-}
-
-.article-link {
+.selector-view {
+    height: 100vh;
+    z-index: 2;
+  }
+  .selector-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .selector-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+  }
+  .article-link {
     display: flex;
     justify-content: flex-end;
-    margin-right: 2.8em;
-}
-
-a {
-    color: #eae9e4;
-    text-decoration: none;
-}
-
-.article-link-text {
-    font-size: 1.5em;
-    color: #8e8e8e;
-}
-
-.right-arrow {
-    margin-left: .6em;
-    margin-top: .2em;
-    width: .6em;
-}
-
-.player-select-box-container {
+    margin-right: 9.5%;
+    padding-bottom: 3%;
+    padding-top: 5%;
+  }
+  .player-select-box-container {
+    max-width: 93%;
+    padding-left: 15%;
+    padding-right: 5%;
+    -webkit-transform: skew(-4deg);
     transform: skew(-4deg);
-    margin-top: 3em;
-    padding-bottom: 4em;
-    flex: 1;
-}
-
-.player-select-row-container {
+  }
+  .player-select-row-container {
     display: flex;
-    flex: 1;
+    flex: 1 1;
     flex-direction: row;
-    margin-right: 10%;
-}
-
-.player-select-icon-container {
-    flex: 1;
-    margin: .25em;
-    aspect-ratio: 9 / 16;
-    border: 2px solid #f3ac32;
-    background-size: 130%;
-    background-image: url("../assets/images/fox-statue.png");
-    background-repeat: no-repeat;
+  }
+  .player-select-icon-container {
+    align-items: flex-end;
+    aspect-ratio: 9/16;
     background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 130%;
     display: flex;
+    flex: 1 1;
+    margin: 0.5em;
+    object-fit: cover;
+    outline: 2px solid #f2552c;
+    outline-offset: 2px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.15s;
+    cursor: pointer;
+    /*clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);*/
+  }
+  .player-select-icon-image-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  div.active {
+    background-color: #f2552c;
+  }
+  .player-select-icon-image {
+    bottom: 0;
+    left: -58%;
+    max-width: 210%;
+    position: absolute;
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+    width: 210%;
+  }
+  img.active {
+    -webkit-filter: drop-shadow(1px 0px 1px #17171650);
+    filter: drop-shadow(1px 0px 1px #17171650);
+  }
+  .player-select-icon-container:hover {
+    outline: 4px solid #f2552c;
+    outline-offset: 3px;
+  }
+  .player-select-icon-text {
     align-items: flex-end;
-}
-
-.player-select-icon-text {
     display: flex;
     flex-direction: row;
-    height: 15%;
-    width: 100%;
-    align-items: flex-end;
     vertical-align: text-bottom;
-}
-
-.player-select-icon-rank {
-    width: 20%;
-    background-color: #f3ac32;
-    font-size: 1.4em;
-    font-weight: bold;
-    padding: .1em;
-    text-align: center;
-}
-
-.player-select-icon-name {
-    width: 80%;
-    padding-left: .4em;
-    padding-bottom: .2em;
+    width: 100%;
+    z-index: 1;
+  }
+  .player-select-icon-rank {
+    background-color: #f2552c;
+    padding: px;
+    background: linear-gradient(hsla(0, 0%, 100%, 0), #171716);
     font-size: 1.3em;
-    background: linear-gradient(#eae9e4, #10100e);
-    background: linear-gradient(rgba(234, 233, 228, 0), rgba(16, 16, 14, 1.0))
+    font-weight: 700;
+    padding: 0.1em;
+    text-align: center;
+    width: 30%;
+    z-index: 3;
+  }
+  .player-select-icon-name,
+  .player-select-icon-rank-num {
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+  .player-select-icon-name {
+    background: linear-gradient(hsla(50, 12%, 100%, 0), #171716);
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-size: 1.5em;
+    padding-bottom: 0.2em;
+    width: 100%;
+    text-transform: uppercase;
+    padding-left: 3px;
+  }
+  .player-select-rank-num {
+    background: linear-gradient(hsla(50, 12%, 100%, 0), #171716);
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-size: 1.5em;
+    padding-bottom: 0.2em;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  @media screen and (min-aspect-ratio: 2/1) {
+    .selector-container {
+        width: 80%;
+        aspect-ratio: 16/9;
+        margin: auto;
+    }
+
+    .article-link {
+        margin-right: 17%;
+    }
 }
+
+  @media screen and (orientation: portrait) {
+    .selector-container {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 5%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .selector-view {
+      height: auto;
+    }
+    .player-select-icon-container {
+      background-size: 120%;
+      margin: .3em;
+      margin: 5px;
+    }
+    .player-select-icon-container:hover {
+      outline: 3px solid #f2552c;
+    }
+    .player-select-icon-rank {
+      font-size: 0.8em;
+      width: unset;
+    }
+    .player-select-icon-name {
+      font-size: .9em;
+      padding-bottom: 0.2em;
+      padding-left: 2px;
+    }
+    .player-select-icon-name-true {
+      font-size: .6em;
+    }
+  }

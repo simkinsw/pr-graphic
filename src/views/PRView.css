@@ -1,31 +1,94 @@
 .pr-view-container {
-    flex: 1;
-    background-color: #10100e;
-    color: #eae9e4;
+    background-color: #0f0e0d;
+    color: #e4e3de;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100vh;
+    overflow: hidden;
 }
 
 .pr-view-left {
-    flex: 1.2;
+    position: relative;
+    flex: 1 1;
+    max-width: 50%;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 122%;
+    padding-right: 5%;
+    background-position: right;
+}
+
+.background-logo-container {
+    position: absolute;
+    z-index: 0;
+    width: 140%;
+    margin-top: -10%;
+    margin-left: -27%;
+}
+
+.background-logo {
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 2;
+}
+
+
+.scroll-ui {
+    align-items: center;
+    -webkit-animation: fadein 2s ease-in;
+    animation: fadein 2s ease-in;
+    bottom: 3%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    position: absolute;
+}
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .pr-view-right {
-    flex: 1;
+    flex: 1 1;
+    height: 200vh;
+    max-width: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: margin-top 0.4s ease-in-out;
+}
+
+.scrolled-up {
+    margin-top: 0;
+}
+
+.scrolled-down {
+    margin-top: -100vh;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 100%;
     justify-content: space-between;
-    margin: 1em;
+    padding: 2.5em;
+    position: absolute;
+    z-index: 3;
 }
 
 .clm-logo {
@@ -33,85 +96,254 @@
 }
 
 .sidebar-text {
-    writing-mode: vertical-rl;
-    font-size: 1.5em;
-    padding: .4em;
+    color: #e4e3de;
+    font-family: acumin-pro, sans-serif;
+    font-size: 1.6em;
     padding-top: 1.5em;
-    color: #8e8e8e;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
 }
-
-.scroll-ui-bottom {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: flex-end;
-    padding: 1.5em;
-}
-
-.scroll-ui-top {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: flex-start;
-    padding: 1.5em;
+.sidebar-text:last-child {
+    margin-top: auto;
 }
 
 .mouse-icon {
-    margin-bottom: .5em;
-    margin-top: .5em;
+    width: 1.8em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+.down-arrow-icon {
     width: 1.8em;
 }
 
 .player-preview-container {
-    margin-top: 5em;
-    margin-bottom: 2.5em;
-    padding-right: 10em;
-    flex: 1;
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    aspect-ratio: 1;
+    flex: 1 1;
+    padding-top: 10%;
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+}
+
+.player-preview-statue-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    height: 90%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+}
+
+.player-preview-statue-image {
+    max-height: 100%;
+    max-width: 150%;
+    z-index: 2;
 }
 
 .player-preview-text {
     display: flex;
     flex-direction: column;
+    position: relative;
     text-align: right;
 }
-
 .player-preview-real-name {
+    font-family: acumin-pro-wide, sans-serif;
+    font-weight: 300;
     font-size: 1.8em;
+    position: absolute;
+    right: 0;
+    color: #e4e3de;
 }
-
 .player-preview-tag {
-    color: #f3ac32;
-    font-weight: bold;
+    color: #f2552c;
+    font-family: acumin-pro-wide, sans-serif;
+    font-weight: 800;
     font-size: 7em;
     line-height: 0.8;
+    position: absolute;
+    right: 0;
+    top: 0.4em;
 }
-
+.player-preview-tag-true {
+    font-size: 6em;
+    top: .55em;
+}
 .player-preview-twitter {
-    padding-top: 1em;
+    padding-top: 4em;
+    font-size: 0.8em;
+    position: absolute;
+    right: 0;
+    top: 7.5em;
+    z-index: 2;
 }
 
 .twitter-icon {
+    color: #e4e3de;
     width: 1.8em;
 }
 
 .player-preview-twitter-handle {
+    color: #e4e3de;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 200;
     font-size: 1.8em;
-    padding-left: .2em;
-    color: #8e8e8e;
+    padding-left: 0.2em;
 }
-
 .number-sign {
-    color: #8e8e8e;
-    font-size: .6em;
+    color: #3d3d39;
+    font-size: 0.45em;
     font-style: normal;
+    font-family: acumin-pro-wide, sans-serif;
+}
+.player-preview-rank {
+    font-size: 18em;
+    font-style: italic;
+    font-family: acumin-pro-wide, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.1em;
+    color: #e4e3de;
+    line-height: 1;
+    font-kerning: none;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0.7em;
+}
+a {
+    color: #e4e3de;
+    text-decoration: none;
 }
 
-.player-preview-rank {
-    line-height: 1.0;
-    font-size: 15em;
-    font-weight: bold;
-    font-style: italic;
+.article-link-text {
+    font-family: acumin-pro-wide, sans-serif;
+    font-weight: 300;
+    color: #e4e3de;
+    font-size: 1.5em;
+    padding-bottom: 0;
+    padding-right: 0.5em;
+}
+.right-arrow {
+    width: 0.6em;
+}
+
+
+@media screen and (orientation: portrait) {
+    .article {
+        display: none;
+    }
+    .pr-view-container {
+        flex-direction: column;
+        overflow-y: visible;
+        overflow-x: hidden;
+        padding-top: 10%;
+        height: auto;
+    }
+
+    .pr-view-right {
+        overflow: visible;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        height: 5%;
+        min-height: 50px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 1em;
+        background: linear-gradient(
+            180deg,
+            rgba(23, 23, 22, 1) 0%,
+            rgba(23, 23, 22, 0) 100%
+        );
+    }
+    .sidebar-text:last-child {
+        margin: unset;
+        margin-left: auto;
+    }
+    .sidebar-logo {
+        padding-top: 0.2em;
+    }
+    .clm-logo {
+        float: left;
+        margin-right: 0.5em;
+        width: 2em;
+    }
+    .sidebar-text {
+        font-size: 1em;
+        padding-top: 0;
+        -webkit-writing-mode: horizontal-tb;
+        writing-mode: horizontal-tb;
+    }
+    .article-link {
+        height: 0;
+        width: 0;
+    }
+    .pr-view-left {
+        display: inline;
+        display: initial;
+        flex: initial;
+        max-width: 100%;
+        width: 100%;
+        background-size: unset;
+        background-position: center;
+    }
+    .player-preview-container {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-right: 10%;
+        padding-top: 0;
+    }
+    .player-preview-statue-container {
+        align-items: center;
+    }
+    .player-preview-text {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2em;
+        text-align: right;
+        width: 100%;
+    }
+    .player-preview-real-name {
+        font-size: 1.2em;
+    }
+    .player-preview-tag {
+        color: #f2552c;
+        font-size: 3.6em;
+        top: 0.5em;
+    }
+    .player-preview-tag-true {
+        font-size: 3em;
+        top: 0.6em;
+    }
+    .player-preview-twitter {
+        padding-top: 0;
+        top: 6em;
+    }
+    .twitter-icon {
+        width: 1em;
+    }
+    .player-preview-twitter-handle {
+        font-size: 1em;
+        padding-left: 0.2em;
+    }
+    .number-sign {
+        font-size: 0.5em;
+        font-style: normal;
+    }
+    .player-preview-rank {
+        font-size: 10em;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1;
+    }
 }
